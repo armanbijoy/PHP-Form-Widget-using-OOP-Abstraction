@@ -20,7 +20,8 @@ public function addElement(HtmlElement $el)
 
 public function render(): string
 {
-    '<form></form>'
+    $content = implode(PHP_EOL,array_map(fn($el)=> $el->render(), $this->element));
+    return sprintf( '<form action="%s" method="%s">%s</form>',$this->action, $this->method);
 }
 
 }
