@@ -12,5 +12,20 @@ abstract class BaseInput extends HtmlElement{
      $this->name = $name;
      $this->value = $value;
  }
+
+ public function render() : string
+    {
+        return sprintf( '<div class="form-group">
+        <label>%s</label><br>
+
+      
+        <input type="password" name="%s" value=%s>
+    </div>',$this->label, $this->renderInput());
+    }
+    abstract public function renderInput() : string;
+    
+
+    
+
 }
 

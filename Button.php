@@ -9,7 +9,7 @@ class Button extends HtmlElement{
     }
     public function render() : string
     {
-        return sprintf('<btton>%s</button>', $this->text);
+        return sprintf('<button>%s</button>', $this->text);
     }
 
 }

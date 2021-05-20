@@ -2,11 +2,10 @@
 
 class TextInput extends BaseInput{
 
-    public function render() : string
+    
+
+    public function renderInput() : string
     {
-        return sprintf( '<div>
-            <label>%s</label><br>
-            <input name="%s" value=%s/>
-        </div>',$this->label, $this->name, $this->value);
+        return sprintf(' <input type="text" name="%s" value=%s>',$this->name, $this->value);
     }
 }
